@@ -71,6 +71,20 @@ The `Milo` class mirrors the miloR Python bindings:
 
 TMM normalisation (`calcNormFactors`) is also exposed at the top level — it's a direct NumPy port of edgeR's algorithm, useful independently of Milo.
 
+## Notebooks
+
+Two executed tutorials live under [`examples/`](examples/) — both run
+the same Haber et al. 2017 (*Nature*) mouse-intestine dataset with
+Control vs Salmonella and produce the same DA results.
+
+| Notebook | Backend |
+|---|---|
+| [`examples/tutorial_omicverse.ipynb`](examples/tutorial_omicverse.ipynb) | `ov.single.DCT(method='milopy')` — the canonical entrypoint when you already use omicverse. |
+| [`examples/tutorial_standalone.ipynb`](examples/tutorial_standalone.ipynb) | `from milor_py import Milo` — direct `make_nhoods → count_nhoods → da_nhoods → build_nhood_graph` pipeline, no omicverse required. |
+
+Either notebook drives the identical `Milo` class; omicverse is the
+upstream development home and this repo mirrors it.
+
 ## Relationship to omicverse
 
 Developed **upstream** in [`omicverse`](https://github.com/Starlitnightly/omicverse):

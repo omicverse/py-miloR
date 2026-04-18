@@ -36,6 +36,8 @@ dependencies = [
     "statsmodels>=0.14",
     "matplotlib>=3.6",
     "seaborn>=0.12",
+    "patsy>=0.5",
+    "inmoose>=0.8",        # edgepy QL-NB GLM solver used by da_nhoods
 ]
 
 [project.optional-dependencies]
